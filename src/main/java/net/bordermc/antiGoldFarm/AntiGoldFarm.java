@@ -1,6 +1,7 @@
 package net.bordermc.antiGoldFarm;
 
 import net.bordermc.antiGoldFarm.command.AntiGoldFarmCommand;
+import net.bordermc.antiGoldFarm.listener.AntiGoldFarmListener;
 import net.bordermc.antiGoldFarm.service.ConfigManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -22,15 +23,9 @@ public final class AntiGoldFarm extends JavaPlugin {
         // Listener & command registration
         Objects.requireNonNull(getCommand("antigoldfarm"), "Command 'antigoldfarm' is not defined in plugin.yml")
                 .setExecutor(new AntiGoldFarmCommand(config));
-        /*
-        getServer().getPluginManager().registerEvents(
-                new AntiGoldFarmListener(), this
-        );
-         */
-    }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+        getServer().getPluginManager().registerEvents(
+                new AntiGoldFarmListener(config), this
+        );
     }
 }
