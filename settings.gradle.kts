@@ -1,1 +1,1 @@
-rootProject.name = "AntiGoldFarm"
+rootProject.name = "BmcAntiGoldFarm"
