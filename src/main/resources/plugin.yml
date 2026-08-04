@@ -2,7 +2,7 @@ name: AntiGoldFarm
 version: '${version}'
 main: net.bordermc.antiGoldFarm.AntiGoldFarm
 author: BorderMC
-api-version: '1.21.11'
+api-version: '1.21'
 website: https://bordermc.net
 load: POSTWORLD
 
